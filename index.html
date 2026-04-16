@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <title>ICE Breaker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🧊 ICE Breaker</h1>
+
+  <div class="dashboard">
+    <div class="stats">
+      <div>Točke: <span id="tocke">0</span></div>
+      <div>Čas: <span id="cas">00:00</span></div>
+      <div>Življenja: <span id="lives">3</span></div>
+    </div>
+
+    <div class="controls">
+		<button onclick="showVizitka()">Vizitka</button>
+		<button onclick="showNavodila()">Navodila</button>
+    </div>
+  </div>
+   
+   <div class="gumbi">
+    <select id="tezavnost">
+        <option value="easy">Lahko</option>
+        <option value="normal" selected>Srednje</option>
+        <option value="hard">Težko</option>
+      </select>
+      <button onclick="startGame()">Začni igro</button>
+	  <button id="btn-pavza" onclick="togglePause()">Pavza</button>
+      <button onclick="restartGame()">Reset</button>
+  </div>
+
+  <div class="game-area">
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
+</div>
+
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <h2 id="popup-title"></h2>
+    <p id="popup-text"></p>
+    <button onclick="closePopup()">Igraj ponovno</button>
+  </div>
+</div>
+<div id="navodila-popup" class="popup hidden">
+  <div class="popup-content">
+    <h2>🕹️ Navodila</h2>
+    <p>
+      Uporabi <strong>levo/desno puščico</strong> za premikanje. Razbij vse ledene kocke in pazi, da ti žogica ne pade v prazno!
+      
+    </p>
+    <button onclick="closeNavodila()">Zapri</button>
+  </div>
+</div>
+<div id="vizitka-popup" class="popup hidden">
+  <div class="popup-content">
+    <h2>🧊 Vizitka</h2>
+    <p>
+      <strong>Igra:</strong> ICE Breaker<br>
+      <strong>Avtor:</strong> Vasja Tošev<br>
+    </p>
+    <button onclick="closeVizitka()">Zapri</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

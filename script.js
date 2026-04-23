@@ -51,11 +51,11 @@ function startGame() {
 
   // Bolj očitne razlike v hitrosti žogice
   if (tezavnost === "easy") {
-    speedMultiplier = 0.6; // 40 % počasneje (zelo opazno)
+    speedMultiplier = 1; // 40 % počasneje (zelo opazno)
   } else if (tezavnost === "normal") {
-    speedMultiplier = 1.0; // Osnovna hitrost
+    speedMultiplier = 1.5; // Osnovna hitrost
   } else {
-    speedMultiplier = 1.5; // 50 % hitreje (pravi izziv!)
+    speedMultiplier = 2; // 50 % hitreje (pravi izziv!)
   }
 
   init();
